@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nov Studio 3D | Miniaturas, Decoração e Linha Tabacaria 3D em Montes Claros/MG</title>
+<meta name="description" content="Nov Studio 3D: miniaturas, decoração, linha Tabacaria 3D, presentes personalizados e peças de reposição impressos em 3D sob encomenda. Atendimento direto pelo WhatsApp (38) 99994-0272 em Montes Claros/MG.">
+<meta name="theme-color" content="#0B0C12">
+<meta property="og:title" content="Nov Studio 3D | Ideias ganham forma">
+<meta property="og:description" content="Peças úteis, presentes personalizados e peças de reposição impressas em 3D. Monte a sua pelo WhatsApp.">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 48 48'%3E%3Cpath fill='%239dff27' d='M24 2 45 14 24 26 3 14Z'/%3E%3Cpath fill='%2353d600' d='M3 14 24 26 24 46 3 34Z'/%3E%3Cpath fill='%23258a00' d='M45 14 24 26 24 46 45 34Z'/%3E%3C/svg%3E">
+<!-- Fontes do Google (funcionam no site publicado; no preview a página usa fontes do sistema) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#0E0F13;
+  --panel:#14171F;
+  --panel-2:#171B25;
+  --line:rgba(255,255,255,.09);
+  --cyan:#9DFF27;      /* verde neon (destaque principal) */
+  --magenta:#53D600;   /* verde médio */
+  --yellow:#FFE600;    /* amarelo dos posts */
+  --orange:#FF6A00;
+  --green:#53D600;
+  --green-deep:#258A00;
+  --text:#F1FFF1;
+  --muted:#A4B8A6;
+  --grad:linear-gradient(135deg,#D6FF54 0%,#9DFF27 45%,#258A00 100%);
+  --glow-cyan:0 0 32px rgba(157,255,39,.30);
+  --glow-magenta:0 0 32px rgba(83,214,0,.35);
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:96px}
+body{
+  background:var(--bg);color:var(--text);line-height:1.6;
+  font-family:'Space Grotesk',system-ui,-apple-system,'Segoe UI',Roboto,Arial,sans-serif;
+  -webkit-font-smoothing:antialiased;overflow-x:hidden;
+}
+::selection{background:var(--magenta);color:#0B0C12}
+.container{width:min(1160px,100% - 40px);margin-inline:auto}
+img{max-width:100%;display:block}
+:focus-visible{outline:3px solid var(--cyan);outline-offset:3px;border-radius:6px}
+.eyebrow{
+  display:inline-flex;align-items:center;gap:12px;text-transform:uppercase;
+  letter-spacing:.24em;font-size:.7rem;font-weight:700;color:var(--cyan);
+  text-shadow:0 0 12px rgba(157,255,39,.6);
+}
+.eyebrow::before{content:"";width:30px;height:2px;background:var(--grad);box-shadow:var(--glow-cyan)}
+.section{padding:84px 0;position:relative}
+.section-head{max-width:760px;margin-bottom:40px}
+.display{
+  font-family:'Archivo Black','Arial Black',Impact,system-ui,sans-serif;font-weight:900;
+  letter-spacing:-.02em;line-height:1.02;text-transform:uppercase;
+}
+.grad-text{background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 0 22px rgba(157,255,39,.45))}
+.section-head h2{font-size:clamp(1.8rem,4.2vw,2.9rem);margin:.4em 0 .35em}
+.section-head p{color:var(--muted);font-size:1.02rem}
+
+/* ══════════ Header ══════════ */
+.header{
+  position:fixed;inset:0 0 auto 0;z-index:60;
+  background:rgba(5,8,6,.78);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--line);
+}
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:18px;height:72px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;font-family:'Archivo Black','Arial Black',sans-serif;font-size:1.05rem;letter-spacing:.02em;color:#fff}
+.logo small{display:block;font-family:'Space Grotesk';font-size:.6rem;letter-spacing:.34em;text-transform:uppercase;color:var(--cyan)}
+.logo svg{filter:drop-shadow(0 0 10px rgba(157,255,39,.55))}
+.nav{display:flex;align-items:center;gap:26px}
+.nav a{text-decoration:none;font-weight:600;font-size:.9rem;color:#B9CBBD;transition:color .2s,text-shadow .2s;text-transform:uppercase;letter-spacing:.08em;font-size:.78rem}
+.nav a:hover{color:var(--cyan);text-shadow:0 0 12px rgba(157,255,39,.7)}
+.btn{
+  display:inline-flex;align-items:center;gap:10px;text-decoration:none;cursor:pointer;border:none;
+  font-family:'Space Grotesk';font-weight:700;font-size:.92rem;border-radius:12px;padding:14px 24px;
+  transition:transform .18s,box-shadow .18s,background .18s;white-space:nowrap;letter-spacing:.02em;
+}
+.btn:active{transform:scale(.97)}
+.btn-wa{
+  background:linear-gradient(135deg,#9dff27 0%,var(--green) 45%,var(--green-deep) 100%);color:#10131A;
+  box-shadow:0 0 26px rgba(110,219,46,.5),0 0 60px rgba(110,219,46,.25);
+}
+.btn-wa:hover{transform:translateY(-2px);box-shadow:0 0 34px rgba(157,255,39,.65),0 0 80px rgba(110,219,46,.35)}
+.btn-neon{background:var(--grad);color:#0B0C12;box-shadow:0 0 26px rgba(157,255,39,.5)}
+.btn-neon:hover{transform:translateY(-2px);box-shadow:0 0 38px rgba(157,255,39,.55),0 0 70px rgba(83,214,0,.4)}
+.btn-ghost{background:rgba(255,255,255,.03);color:var(--cyan);border:1px solid rgba(157,255,39,.45)}
+.btn-ghost:hover{background:rgba(157,255,39,.1);box-shadow:var(--glow-cyan)}
+.btn-sm{padding:11px 18px;font-size:.84rem}
+.hamburger{display:none;background:none;border:1px solid var(--line);cursor:pointer;width:46px;height:46px;border-radius:12px;color:var(--cyan)}
+.hamburger svg{width:24px;height:24px;stroke:currentColor;stroke-width:2;fill:none;stroke-linecap:round}
+.mobile-nav{display:none;flex-direction:column;gap:4px;padding:14px 20px 22px;background:rgba(5,8,6,.96);border-bottom:1px solid var(--line)}
+.mobile-nav a{text-decoration:none;font-weight:700;padding:13px 12px;border-radius:10px;color:#CFF7D6;text-transform:uppercase;letter-spacing:.06em;font-size:.82rem}
+.mobile-nav a:hover{background:rgba(157,255,39,.08);color:var(--cyan)}
+.mobile-nav.open{display:flex}
+
+/* ══════════ Hero ══════════ */
+.hero{
+  position:relative;overflow:hidden;padding:124px 0 90px;
+  background:
+    radial-gradient(1000px 600px at 115% -10%, rgba(83,214,0,.22), transparent 60%),
+    radial-gradient(800px 600px at -20% 115%, rgba(157,255,39,.18), transparent 55%),
+    radial-gradient(600px 400px at 50% 120%, rgba(157,255,39,.25), transparent 60%),
+    var(--bg);
+}
+/* estrelas */
+.hero::before{
+  content:"";position:absolute;inset:0;opacity:.6;pointer-events:none;
+  background-image:
+    radial-gradient(1px 1px at 12% 22%, #fff 100%, transparent),
+    radial-gradient(1px 1px at 32% 68%, #fff 100%, transparent),
+    radial-gradient(1.5px 1.5px at 22% 44%, #e8ffd1 100%, transparent),
+    radial-gradient(1px 1px at 47% 18%, #fff 100%, transparent),
+    radial-gradient(1px 1px at 63% 55%, #E8FFD1 100%, transparent),
+    radial-gradient(1.5px 1.5px at 74% 26%, #fff 100%, transparent),
+    radial-gradient(1px 1px at 86% 63%, #e8ffd1 100%, transparent),
+    radial-gradient(1px 1px at 92% 14%, #fff 100%, transparent),
+    radial-gradient(1px 1px at 8% 78%, #E8FFD1 100%, transparent);
+}
+/* piso de grade synthwave */
+.hero-floor{
+  position:absolute;left:-15%;right:-15%;bottom:-160px;height:320px;pointer-events:none;opacity:.55;
+  background:
+    linear-gradient(to top, rgba(5,8,6,0) 0%, rgba(5,8,6,.85) 78%),
+    repeating-linear-gradient(90deg, rgba(157,255,39,.5) 0 2px, transparent 2px 64px),
+    repeating-linear-gradient(0deg, rgba(83,214,0,.55) 0 2px, transparent 2px 40px);
+  transform:perspective(650px) rotateX(62deg);transform-origin:top center;
+}
+.hero-inner{position:relative;display:grid;grid-template-columns:1.04fr .96fr;gap:56px;align-items:center}
+.pill{
+  display:inline-flex;align-items:center;gap:10px;border:1px solid rgba(157,255,39,.4);
+  background:rgba(157,255,39,.06);border-radius:999px;padding:9px 18px;font-size:.74rem;
+  font-weight:700;color:var(--cyan);letter-spacing:.14em;text-transform:uppercase;
+  box-shadow:inset 0 0 18px rgba(157,255,39,.12),var(--glow-cyan);
+}
+.pill .dot{width:9px;height:9px;border-radius:50%;background:#9dff27;box-shadow:0 0 10px #9dff27;animation:blink 1.3s infinite}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:.25}}
+.hero h1{font-size:clamp(2.35rem,6.2vw,4.1rem);margin:22px 0 20px;color:#fff}
+.hero h1 .flicker{animation:flicker 4s infinite}
+@keyframes flicker{0%,100%{opacity:1}92%{opacity:1}93%{opacity:.35}94%{opacity:1}96%{opacity:.5}97%{opacity:1}}
+.hero-sub{font-size:1.08rem;color:var(--muted);max-width:34rem;margin-bottom:28px}
+.hero-sub strong{color:#fff}
+.hero-ctas{display:flex;gap:14px;flex-wrap:wrap;margin-bottom:24px}
+.chips{display:flex;gap:12px 20px;flex-wrap:wrap}
+.chip{display:inline-flex;align-items:center;gap:9px;font-size:.82rem;font-weight:600;color:#B9CBBD}
+.chip svg{width:17px;height:17px;stroke:var(--cyan);stroke-width:2.4;fill:none;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 0 5px rgba(157,255,39,.7))}
+.hero-visual{position:relative}
+.hero-frame{
+  border-radius:24px;overflow:hidden;position:relative;
+  border:2px solid transparent;
+  background:linear-gradient(#14171F,#14171F) padding-box,var(--grad) border-box;
+  box-shadow:0 0 40px rgba(157,255,39,.4),0 0 90px rgba(83,214,0,.22),inset 0 0 40px rgba(157,255,39,.12);
+}
+.hero-frame img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/4.35}
+.hero-badge{
+  position:absolute;top:18px;right:18px;background:rgba(5,8,6,.72);backdrop-filter:blur(6px);
+  border:1px solid rgba(214,255,84,.5);color:var(--yellow);font-size:.66rem;font-weight:700;
+  letter-spacing:.2em;text-transform:uppercase;padding:8px 14px;border-radius:10px;
+  box-shadow:0 0 18px rgba(214,255,84,.35);text-align:center;line-height:1.5;
+}
+.float-card{
+  position:absolute;left:-20px;bottom:36px;display:flex;gap:12px;align-items:center;max-width:245px;
+  background:rgba(10,15,11,.85);backdrop-filter:blur(10px);border:1px solid rgba(157,255,39,.4);
+  border-radius:16px;padding:13px 17px;box-shadow:var(--glow-cyan);
+  animation:floaty 4s ease-in-out infinite;
+}
+@keyframes floaty{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+.float-card .ic{flex:0 0 46px;height:46px;border-radius:12px;display:grid;place-items:center;background:var(--grad)}
+.float-card .ic svg{width:24px;height:24px;stroke:#0B0C12;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.float-card b{font-size:.86rem;line-height:1.35;color:#fff;display:block}
+.float-card span{font-size:.73rem;color:var(--muted)}
+
+/* ══════════ Marquee ══════════ */
+.marquee{
+  background:#0B0C12;border-block:1px solid rgba(157,255,39,.25);overflow:hidden;padding:13px 0;
+  box-shadow:inset 0 0 30px rgba(157,255,39,.06);
+}
+.marquee-track{display:flex;width:max-content;animation:marquee 26s linear infinite;white-space:nowrap}
+.marquee-track span{padding:0 24px;font-size:.82rem;letter-spacing:.22em;text-transform:uppercase;font-weight:700;color:#F1FFF1;text-shadow:0 0 14px rgba(157,255,39,.6)}
+.marquee-track i{color:var(--magenta);font-style:normal;text-shadow:var(--glow-magenta)}
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+
+/* ══════════ Produtos ══════════ */
+.produtos{background:radial-gradient(900px 500px at 50% -10%, rgba(157,255,39,.12), transparent 65%),#0B0C12}
+.filters{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:30px}
+.filter-btn{
+  border:1px solid var(--line);background:rgba(255,255,255,.03);color:var(--muted);
+  border-radius:999px;padding:10px 20px;font-family:'Space Grotesk';font-weight:700;font-size:.83rem;
+  cursor:pointer;transition:all .2s;text-transform:uppercase;letter-spacing:.08em;
+}
+.filter-btn:hover{border-color:var(--cyan);color:var(--cyan)}
+.filter-btn.active{background:var(--grad);border-color:transparent;color:#0B0C12;box-shadow:0 0 22px rgba(157,255,39,.5)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(255px,1fr));gap:22px}
+.card{
+  border-radius:20px;overflow:hidden;display:flex;flex-direction:column;transition:transform .25s,box-shadow .25s;
+  border:1px solid transparent;
+  background:linear-gradient(#14171F,#14171F) padding-box,linear-gradient(165deg,rgba(157,255,39,.55),rgba(83,214,0,.55)) border-box;
+  box-shadow:0 10px 30px rgba(0,0,0,.45);
+}
+.card:hover{transform:translateY(-7px);box-shadow:0 0 38px rgba(157,255,39,.22),0 0 70px rgba(83,214,0,.16),0 18px 40px rgba(0,0,0,.5)}
+.card-img{aspect-ratio:4/4.5;overflow:hidden;position:relative;background:#14171F}
+.card-img img{width:100%;height:100%;object-fit:cover;transition:transform .6s}
+.card:hover .card-img img{transform:scale(1.07)}
+.card-cat{
+  position:absolute;top:12px;left:12px;background:rgba(5,8,6,.68);backdrop-filter:blur(6px);
+  border:1px solid rgba(157,255,39,.45);color:var(--cyan);font-size:.64rem;font-weight:700;
+  letter-spacing:.2em;text-transform:uppercase;padding:6px 13px;border-radius:999px;
+}
+.card-body{padding:17px 18px 18px;display:flex;flex-direction:column;gap:9px;flex:1}
+.card-body h3{font-size:1.1rem;letter-spacing:.01em;color:#fff}
+.card-body p{font-size:.87rem;color:var(--muted);flex:1}
+.card-cta{
+  display:flex;align-items:center;justify-content:center;gap:9px;text-decoration:none;
+  border:1px solid rgba(157,255,39,.5);color:#9DFF27;font-weight:700;font-size:.86rem;
+  border-radius:12px;padding:12px 14px;transition:all .2s;text-transform:uppercase;letter-spacing:.06em;
+}
+.card-cta:hover{background:var(--green);border-color:var(--green);color:#10131A;box-shadow:0 0 24px rgba(110,219,46,.55)}
+.card-cta svg{width:19px;height:19px;fill:currentColor}
+.card-custom{
+  align-items:center;justify-content:center;text-align:center;padding:36px 24px;gap:14px;
+  border:1.5px dashed rgba(83,214,0,.45);background:radial-gradient(circle at 50% 30%, rgba(83,214,0,.08), transparent 70%);
+}
+.card-custom .big{width:78px;height:78px;border-radius:20px;background:var(--grad);display:grid;place-items:center;box-shadow:var(--glow-magenta)}
+.card-custom .big svg{width:40px;height:40px}
+.card-custom h3{font-size:1.28rem;color:#fff}
+.card-custom p{color:var(--muted);font-size:.9rem}
+.card-custom strong{color:var(--yellow)}
+.note{font-size:.8rem;color:var(--muted);margin-top:20px;display:flex;gap:10px;align-items:center}
+.note svg{flex:0 0 17px;width:17px;height:17px;stroke:var(--cyan);fill:none;stroke-width:2;stroke-linecap:round;filter:drop-shadow(0 0 5px rgba(157,255,39,.7))}
+
+/* ══════════ Benefícios ══════════ */
+.benefits-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.benefit{
+  background:var(--panel);border:1px solid var(--line);border-radius:18px;padding:26px 24px;
+  transition:transform .2s,box-shadow .2s,border-color .2s;position:relative;overflow:hidden;
+}
+.benefit::after{content:"";position:absolute;top:0;left:0;right:0;height:2px;background:var(--grad);opacity:.7}
+.benefit:hover{transform:translateY(-5px);border-color:rgba(157,255,39,.4);box-shadow:0 0 34px rgba(157,255,39,.15)}
+.benefit .ic{width:54px;height:54px;border-radius:14px;display:grid;place-items:center;margin-bottom:14px;background:rgba(157,255,39,.07);border:1px solid rgba(157,255,39,.35)}
+.benefit .ic svg{width:26px;height:26px;stroke:var(--cyan);stroke-width:1.9;fill:none;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 0 6px rgba(157,255,39,.8))}
+.benefit h3{font-size:1.02rem;color:#fff;margin-bottom:7px;letter-spacing:.01em}
+.benefit p{font-size:.88rem;color:var(--muted)}
+
+/* ══════════ Como funciona ══════════ */
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;counter-reset:step}
+.step{
+  position:relative;border-radius:18px;padding:28px 26px 26px;overflow:hidden;
+  background:linear-gradient(#14171F,#14171F) padding-box;border:1px solid var(--line);
+}
+.step::before{
+  counter-increment:step;content:"0" counter(step);position:absolute;top:2px;right:16px;
+  font-family:'Archivo Black';font-size:4.6rem;color:transparent;
+  -webkit-text-stroke:1.5px rgba(157,255,39,.35);
+}
+.step .ic{width:56px;height:56px;border-radius:14px;background:var(--grad);display:grid;place-items:center;margin-bottom:16px;box-shadow:var(--glow-magenta)}
+.step .ic svg{width:27px;height:27px;stroke:#0B0C12;stroke-width:2;fill:none;stroke-linecap:round;stroke-linejoin:round}
+.step h3{font-size:1.14rem;color:#fff;margin-bottom:8px}
+.step p{font-size:.9rem;color:var(--muted)}
+.passo-tag{font-size:.66rem;letter-spacing:.28em;text-transform:uppercase;color:var(--yellow);font-weight:700;text-shadow:0 0 10px rgba(214,255,84,.5)}
+
+/* ══════════ Sobre ══════════ */
+.sobre-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+.sobre-grid h2{font-size:clamp(1.8rem,4vw,2.7rem);margin:.4em 0 .35em}
+.sobre-grid p{color:#8A9A8E;margin:14px 0}
+.sobre-grid strong{color:#fff}
+.checklist{list-style:none;margin:22px 0 26px;display:grid;gap:12px}
+.checklist li{display:flex;gap:12px;align-items:flex-start;font-weight:500;font-size:.94rem;color:#CFF7D6}
+.checklist svg{flex:0 0 22px;width:22px;height:22px;margin-top:2px}
+.sobre-art{
+  border-radius:24px;padding:40px 34px;position:relative;overflow:hidden;color:#fff;
+  background:radial-gradient(circle at 80% 10%, rgba(157,255,39,.16), transparent 55%),radial-gradient(circle at 15% 90%, rgba(83,214,0,.18), transparent 55%),var(--panel-2);
+  border:1px solid var(--line);box-shadow:0 0 50px rgba(157,255,39,.22);
+}
+.sobre-art::after{content:"";position:absolute;width:300px;height:300px;border:1px dashed rgba(157,255,39,.3);border-radius:50%;top:-100px;right:-100px;animation:spin 24s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.sobre-art .tagline{font-size:.66rem;letter-spacing:.3em;text-transform:uppercase;color:var(--yellow);font-weight:700}
+.sobre-art h3{font-size:1.55rem;letter-spacing:-.02em;margin:10px 0 6px;line-height:1.15}
+.sobre-art p{color:var(--muted);font-size:.93rem}
+.art-stats{display:flex;margin-top:26px;border-top:1px solid var(--line);padding-top:22px}
+.art-stat{flex:1;padding-right:12px}
+.art-stat + .art-stat{border-left:1px solid var(--line);padding-left:16px}
+.art-stat b{display:block;font-family:'Archivo Black';font-size:1.35rem;background:var(--grad);-webkit-background-clip:text;background-clip:text;color:transparent}
+.art-stat span{font-size:.74rem;color:var(--muted)}
+.art-cube{display:flex;justify-content:center;margin:4px auto 18px;filter:drop-shadow(0 0 26px rgba(157,255,39,.65))}
+
+/* ══════════ FAQ ══════════ */
+.faq-wrap{max-width:860px;margin-inline:auto}
+.faq-item{border:1px solid var(--line);background:var(--panel);border-radius:16px;margin-bottom:12px;overflow:hidden;transition:border-color .25s}
+.faq-item:hover{border-color:rgba(157,255,39,.3)}
+.faq-q{
+  width:100%;display:flex;justify-content:space-between;align-items:center;gap:16px;
+  padding:20px 22px;background:none;border:none;font-family:'Space Grotesk';font-size:1rem;font-weight:600;
+  text-align:left;cursor:pointer;color:#fff;
+}
+.faq-q .fi{flex:0 0 32px;height:32px;border-radius:10px;display:grid;place-items:center;background:rgba(83,214,0,.12);border:1px solid rgba(83,214,0,.4);transition:transform .3s}
+.faq-q .fi svg{width:17px;height:17px;stroke:var(--magenta);stroke-width:2.3;stroke-linecap:round;filter:drop-shadow(0 0 5px rgba(83,214,0,.8))}
+.faq-q[aria-expanded="true"] .fi{transform:rotate(45deg)}
+.faq-a{max-height:0;overflow:hidden;transition:max-height .32s ease}
+.faq-a p{padding:0 22px 19px;color:var(--muted);font-size:.93rem}
+
+/* ══════════ Instagram band ══════════ */
+.ig-band{background:linear-gradient(115deg,#0B0C12 0%,#171B25 58%,#53D600 100%);padding:36px 0;position:relative;overflow:hidden}
+.ig-band::before{content:"";position:absolute;inset:0;background:radial-gradient(600px 200px at 50% 0%, rgba(255,255,255,.35), transparent 70%)}
+.ig-inner{position:relative;display:flex;align-items:center;justify-content:space-between;gap:26px;flex-wrap:wrap}
+.ig-inner .l{display:flex;align-items:center;gap:18px}
+.ig-inner svg{flex:0 0 54px;width:54px;height:54px;filter:drop-shadow(0 4px 10px rgba(0,0,0,.35))}
+.ig-inner h3{font-size:1.3rem;letter-spacing:.01em;color:#fff;text-shadow:0 2px 8px rgba(0,0,0,.35)}
+.ig-inner p{font-size:.88rem;color:#fff;opacity:.95}
+.btn-ig{background:#d6ff54;color:#10131A;font-weight:800;border-radius:999px;padding:14px 28px;text-decoration:none;display:inline-flex;gap:10px;align-items:center;transition:transform .2s,box-shadow .2s;box-shadow:0 8px 24px rgba(0,0,0,.3)}
+.btn-ig:hover{transform:translateY(-2px);box-shadow:0 12px 34px rgba(0,0,0,.4)}
+
+/* ══════════ Contato final ══════════ */
+.cta-final{
+  text-align:center;padding:96px 0;position:relative;overflow:hidden;
+  background:radial-gradient(800px 460px at 50% -10%, rgba(83,214,0,.28), transparent 65%),radial-gradient(600px 400px at 50% 120%, rgba(157,255,39,.22), transparent 60%),var(--bg);
+}
+.cta-final h2{font-size:clamp(2rem,5.4vw,3.6rem);margin-bottom:16px;color:#fff}
+.cta-final p{color:var(--muted);max-width:36rem;margin:0 auto 30px;font-size:1.05rem}
+.cta-final .num{display:block;margin-top:24px;font-size:1.6rem;font-weight:700;letter-spacing:.06em;color:#fff;text-shadow:0 0 18px rgba(157,255,39,.6)}
+.cta-final .num small{display:block;font-size:.66rem;letter-spacing:.3em;text-transform:uppercase;color:var(--cyan);font-weight:700;margin-bottom:4px}
+.urg-tag{display:inline-flex;align-items:center;gap:10px;border:1px solid rgba(214,255,84,.45);background:rgba(214,255,84,.06);color:var(--yellow);font-size:.72rem;letter-spacing:.2em;text-transform:uppercase;font-weight:700;border-radius:999px;padding:9px 20px;margin-bottom:22px}
+
+/* ══════════ Footer ══════════ */
+.footer{background:#0B0C12;border-top:1px solid var(--line);color:#8A9A8E;padding:46px 0 30px;font-size:.9rem}
+.footer-grid{display:flex;justify-content:space-between;gap:32px;flex-wrap:wrap;margin-bottom:26px}
+.footer .logo{color:#fff;font-size:1rem}
+.footer h4{color:var(--cyan);font-size:.68rem;letter-spacing:.24em;text-transform:uppercase;margin-bottom:12px}
+.footer a{color:#B9CBBD;text-decoration:none}
+.footer a:hover{color:var(--cyan)}
+.footer-bottom{border-top:1px solid var(--line);padding-top:18px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:.78rem}
+
+/* ══════════ Botão flutuante WhatsApp ══════════ */
+.wa-float{
+  position:fixed;right:20px;bottom:22px;z-index:70;width:66px;height:66px;border-radius:50%;
+  background:linear-gradient(135deg,#9dff27,var(--green-deep));display:grid;place-items:center;
+  box-shadow:0 0 28px rgba(110,219,46,.6),0 0 70px rgba(110,219,46,.3);transition:transform .2s;text-decoration:none;
+}
+.wa-float::before{content:"";position:absolute;inset:0;border-radius:50%;background:var(--green);animation:ping 2s cubic-bezier(0,0,.2,1) infinite;z-index:-1}
+@keyframes ping{0%{transform:scale(1);opacity:.75}80%,100%{transform:scale(2);opacity:0}}
+.wa-float:hover{transform:scale(1.12)}
+.wa-float svg{width:34px;height:34px;fill:#10131A}
+
+/* ══════════ Responsivo ══════════ */
+@media (max-width:1020px){.benefits-grid{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:900px){
+  .nav,.header .btn{display:none}
+  .hamburger{display:grid;place-items:center}
+  .hero{padding:110px 0 70px}
+  .hero-inner{grid-template-columns:1fr;gap:40px}
+  .hero-floor{opacity:.35}
+  .float-card{left:10px;bottom:26px}
+  .section{padding:64px 0}
+  .steps{grid-template-columns:1fr}
+  .sobre-grid{grid-template-columns:1fr;gap:36px}
+}
+@media (max-width:560px){
+  .benefits-grid{grid-template-columns:1fr}
+  .grid{grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:12px}
+  .card-body h3{font-size:.95rem}
+  .card-body p{font-size:.79rem}
+  .card-cta{font-size:.72rem;padding:11px 8px;gap:6px;letter-spacing:.04em}
+  .card-cta svg{width:16px;height:16px}
+  .hero-ctas .btn{width:100%;justify-content:center}
+  .ig-inner{justify-content:center;text-align:center}
+  .ig-inner .l{flex-direction:column}
+}
+@media (prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important}
+  html{scroll-behavior:auto}
+}
+
+/* Identidade visual NovStudio3D — preto, branco e verde-limão */
+.hero-frame::after{content:"";position:absolute;inset:0;pointer-events:none;z-index:1;background:linear-gradient(to bottom,transparent 58%,rgba(83,214,0,.12));mix-blend-mode:screen}
+.hero-badge{z-index:2}
+.card-img::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(to bottom,transparent 68%,rgba(83,214,0,.10));z-index:1}
+.card-cat{z-index:2}
+.logo strong{color:var(--cyan)}
+
+</style>
+</head>
+<body>
+
+<!-- ═══════════ HEADER ═══════════ -->
+<header class="header" id="top">
+  <div class="container header-inner">
+    <a class="logo" href="#top" aria-label="Nov Studio 3D — início">
+      <svg width="38" height="38" viewBox="0 0 48 48" aria-hidden="true">
+        <path fill="#9dff27" d="M24 2 45 14 24 26 3 14Z"/>
+        <path fill="#53d600" d="M3 14 24 26 24 46 3 34Z"/>
+        <path fill="#258a00" d="M45 14 24 26 24 46 45 34Z"/>
+      </svg>
+      <span>Nov Studio 3D<small>Ideias ganham forma</small></span>
+    </a>
+    <nav class="nav" aria-label="Navegação principal">
+      <a href="#produtos">Produtos</a>
+      <a href="#beneficios">Por que 3D</a>
+      <a href="#como-funciona">Como funciona</a>
+      <a href="#sobre">Sobre</a>
+      <a href="#faq">FAQ</a>
+    </nav>
+    <a class="btn btn-wa btn-sm" data-wa="Olá! Vim pelo site da Nov Studio 3D e quero fazer um pedido." href="#">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.297-.497.1-.198.05-.371-.025-.52-.074-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.262.49 1.694.627.712.227 1.36.195 1.871.118.571-.085 1.758-.718 2.006-1.41.248-.694.248-1.289.173-1.41-.074-.124-.272-.198-.57-.347m-5.421 5.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a8.19 8.19 0 0 1-1.26-4.827 8.203 8.203 0 0 1 8.224-8.207c2.196 0 4.258.858 5.815 2.414a8.187 8.187 0 0 1 2.411 5.822c-.003 4.54-3.699 8.306-8.213 8.306m7.116-18.197A10.01 10.01 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.88 11.88 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.82 11.82 0 0 0-3.36-8.388"/></svg>
+      Pedir agora
+    </a>
+    <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="mobileNav">
+      <svg viewBox="0 0 24 24"><line x1="4" y1="7" x2="20" y2="7"/><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="17" x2="20" y2="17"/></svg>
+    </button>
+  </div>
+  <div class="mobile-nav" id="mobileNav">
+    <a href="#produtos">Produtos</a>
+    <a href="#beneficios">Por que impressão 3D</a>
+    <a href="#como-funciona">Como funciona</a>
+    <a href="#sobre">Sobre a Nov Studio 3D</a>
+    <a href="#faq">Perguntas frequentes</a>
+    <a class="btn btn-wa" data-wa="Olá! Vim pelo site da Nov Studio 3D e quero fazer um pedido." href="#" style="justify-content:center;margin-top:8px">Chamar no WhatsApp agora</a>
+  </div>
+</header>
+
+<main>
+<!-- ═══════════ HERO ═══════════ -->
+<section class="hero">
+  <div class="hero-floor"></div>
+  <div class="container hero-inner">
+    <div>
+      <span class="pill"><span class="dot"></span> Ideias ganham forma · Montes Claros/MG</span>
+      <h1 class="display">Coisas que<br><span class="grad-text flicker">não existem</span><br>em loja nenhuma.</h1>
+      <p class="hero-sub">Miniaturas, decoração, linha Tabacaria 3D e peças de reposição — <strong>impressas sob medida, do seu jeito</strong>, direto da bancada do nosso estúdio pra sua mão.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-neon" href="#produtos">
+          Ver o catálogo
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+        <a class="btn btn-wa" data-wa="Olá! Vim pelo site da Nov Studio 3D e quero fazer um pedido AGORA." href="#">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.297-.497.1-.198.05-.371-.025-.52-.074-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.262.49 1.694.627.712.227 1.36.195 1.871.118.571-.085 1.758-.718 2.006-1.41.248-.694.248-1.289.173-1.41-.074-.124-.272-.198-.57-.347m-5.421 5.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a8.19 8.19 0 0 1-1.26-4.827 8.203 8.203 0 0 1 8.224-8.207c2.196 0 4.258.858 5.815 2.414a8.187 8.187 0 0 1 2.411 5.822c-.003 4.54-3.699 8.306-8.213 8.306m7.116-18.197A10.01 10.01 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.88 11.88 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.82 11.82 0 0 0-3.36-8.388"/></svg>
+          Quero agora
+        </a>
+      </div>
+      <div class="chips" aria-label="Diferenciais">
+        <span class="chip"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 10"/></svg>Você escolhe cor e tamanho</span>
+        <span class="chip"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 10"/></svg>Fala direto com quem imprime</span>
+        <span class="chip"><svg viewBox="0 0 24 24"><polyline points="20 6 9 17 4 10"/></svg>Retirada grátis em Montes Claros</span>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <figure class="hero-frame">
+        <span class="hero-badge">Feito<br>sob<br>encomenda</span>
+        <img src="img/hero.jpg" alt="Impressora 3D em operação num estúdio com iluminação neon, rodeada de peças impressas em 3D — vasos, suportes e letreiro de criação">
+      </figure>
+      <div class="float-card" role="note">
+        <div class="ic">
+          <svg viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+        </div>
+        <div><b>Do clique à peça pronta</b><span>resposta rápida direto no WhatsApp</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ MARQUEE ═══════════ -->
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track" id="marqueeTrack">
+    <span>Miniaturas &amp; decoração 3D</span><i>◆</i><span>Linha Tabacaria 3D</span><i>◆</i><span>Peças de reposição</span><i>◆</i><span>Presentes personalizados</span><i>◆</i><span>Acessibilidade real</span><i>◆</i><span>Feito sob medida</span><i>◆</i>
+  </div>
+</div>
+
+<!-- ═══════════ PRODUTOS ═══════════ -->
+<section class="section produtos" id="produtos" aria-labelledby="tit-produtos">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Vitrine</span>
+      <h2 id="tit-produtos" class="display">Achou <span class="grad-text">o seu?</span></h2>
+      <p>Cada peça é impressa sob encomenda — por isso você escolhe a cor e combina o tamanho. Tocou, levou informação: peça pelo WhatsApp e a gente fecha na hora.</p>
+    </div>
+
+    <div class="filters" role="group" aria-label="Filtrar por categoria">
+      <button class="filter-btn active" data-filter="all">Todos</button>
+      <button class="filter-btn" data-filter="casa">Casa</button>
+      <button class="filter-btn" data-filter="escritorio">Escritório</button>
+      <button class="filter-btn" data-filter="cozinha">Cozinha</button>
+      <button class="filter-btn" data-filter="decoracao">Decoração</button>
+    </div>
+
+    <div class="grid" id="productGrid">
+
+      <article class="card" data-cat="escritorio">
+        <div class="card-img"><span class="card-cat">Escritório</span><img src="img/suporte-celular.jpg" alt="Suporte ajustável para celular impresso em 3D na cor coral neon" loading="lazy"></div>
+        <div class="card-body">
+          <h3>Suporte Ajustável para Celular</h3>
+          <p>Ângulo regulável, base firme — perfeito pra videochamada, receita na cozinha e maratonar série com estilo.</p>
+          <a class="card-cta" data-wa="Olá! Tenho interesse no Suporte Ajustável para Celular." href="#"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.297-.497.1-.198.05-.371-.025-.52-.074-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.262.49 1.694.627.712.227 1.36.195 1.871.118.571-.085 1.758-.718 2.006-1.41.248-.694.248-1.289.173-1.41-.074-.124-.272-.198-.57-.347m-5.421 5.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a8.19 8.19 0 0 1-1.26-4.827 8.203 8.203 0 0 1 8.224-8.207c2.196 0 4.258.858 5.815 2.414a8.187 8.187 0 0 1 2.411 5.822c-.003 4.54-3.699 8.306-8.213 8.306m7.116-18.197A10.01 10.01 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.88 11.88 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.82 11.82 0 0 0-3.36-8.388"/></svg>Quero esse</a>
+        </div>
+      </article>
+
+      <article class="card" data-cat="escritorio">
+        <div class="card-img"><span class="card-cat">Escritório</span><img src="img/organizador-cabos.jpg" alt="Kit de clips organizadores de cabos impressos em 3D nas cores neon ciano, magenta e amarelo" loading="lazy"></div>
+        <div class="card-body">
+          <h3>Kit Organizador de Cabos</h3>
+          <p>Fim da guerra dos fios: prende e guia cabos de carregador, dados e fone — na mesa ou na parede.</p>
+          <a class="card-cta" data-wa="Olá! Tenho interesse no Kit Organizador de Cabos." href="#"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.297-.497.1-.198.05-.371-.025-.52-.074-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.262.49 1.694.627.712.227 1.36.195 1.871.118.571-.085 1.758-.718 2.006-1.41.248-.694.248-1.289.173-1.41-.074-.124-.272-.198-.57-.347m-5.421 5.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a8.19 8.19 0 0 1-1.26-4.827 8.203 8.203 0 0 1 8.224-8.207c2.196 0 4.258.858 5.815 2.414a8.187 8.187 0 0 1 2.411 5.822c-.003 4.54-3.699 8.306-8.213 8.306m7.116-18.197A10.01 10.01 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.88 11.88 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.82 11.82 0 0 0-3.36-8.388"/></svg>Quero esse</a>
+        </div>
+      </article>
+
+      <article class="card" data-cat="decoracao">
+        <div class="card-img"><span class="card-cat">Decoração</span><img src="img/vaso-geometrico.jpg" alt="Vaso geométrico low-poly impresso em 3D com acabamento iridescente violeta e ciano" loading="lazy"></div>
+        <div class="card-body">
+          <h3>Vaso Geométrico Iridescente</h3>
+          <p>Low-poly com acabamento que muda conforme a luz — ponto focal da sala, sozinho ou com suculenta.</p>
+          <a class="card-cta" data-wa="Olá! Tenho interesse no Vaso Geométrico Iridescente." href="#"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.297-.497.1-.198.05-.371-.025-.52-.074-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.262.49 1.694.627.712.227 1.36.195 1.871.118.571-.085 1.758-.718 2.006-1.41.248-.694.248-1.289.173-1.41-.074-.124-.272-.198-.57-.347m-5.421 5.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a8.19 8.19 0 0 1-1.26-4.827 8.203 8.203 0 0 1 8.224-8.207c2.196 0 4.258.858 5.815 2.414a8.187 8.187 0 0 1 2.411 5.822c-.003 4.54-3.699 8.306-8.213 8.306m7.116-18.197A10.01 10.01 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.88 11.88 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.82 11.82 0 0 0-3.36-8.388"/></svg>Quero esse</a>
+        </div>
+      </article>
+
+      <article class="card" data-cat="escritorio">
+        <div class="card-img"><span class="card-cat">Escritório</span><img src="img/suporte-fone.jpg" alt="Suporte de mesa para fones de ouvido impresso em 3D na cor preta com acentos neon ciano" loading="lazy"></div>
+        <div class="card-body">
+          <h3>Suporte para Fones</h3>
+          <p>Apoio imponente pro seu headset over-ear — protege o arco e transforma a mesa num setup de respeito.</p>
+          <a class="card-cta" data-wa="Olá! Tenho interesse no Suporte para Fones." href="#"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.297-.497.1-.198.05-.371-.025-.52-.074-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.262.49 1.694.627.712.227 1.36.195 1.871.118.571-.085 1.758-.718 2.006-1.41.248-.694.248-1.289.173-1.41-.074-.124-.272-.198-.57-.347m-5.421 5.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a8.19 8.19 0 0 1-1.26-4.827 8.203 8.203 0 0 1 8.224-8.207c2.196 0 4.258.858 5.815 2.414a8.187 8.187 0 0 1 2.411 5.822c-.003 4.54-3.699 8.306-8.213 8.306m7.116-18.197A10.01 10.01 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.88 11.88 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.82 11.82 0 0 0-3.36-8.388"/></svg>Quero esse</a>
+        </div>
+      </article>
+
+      <article class="card" data-cat="cozinha">
+        <div class="card-img"><span class="card-cat">Cozinha</span><img src="img/abridor-pote.jpg" alt="Abridor de pote ergonômico impresso em 3D com gradiente neon amarelo e laranja" loading="lazy"></div>
+        <div class="card-body">
+          <h3>Abridor de Pote Ergonômico</h3>
+          <p>Força extra pra tampa de vidro sem esforço — salva o dia (e as mãos) de quem tem dificuldade de apertar.</p>
+          <a class="card-cta" data-wa="Olá! Tenho interesse no Abridor de Pote Ergonômico." href="#"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.297-.497.1-.198.05-.371-.025-.52-.074-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.262.49 1.694.627.712.227 1.36.195 1.871.118.571-.085 1.758-.718 2.006-1.41.248-.694.248-1.289.173-1.41-.074-.124-.272-.198-.57-.347m-5.421 5.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a8.19 8.19 0 0 1-1.26-4.827 8.203 8.203 0 0 1 8.224-8.207c2.196 0 4.258.858 5.815 2.414a8.187 8.187 0 0 1 2.411 5.822c-.003 4.54-3.699 8.306-8.213 8.306m7.116-18.197A10.01 10.01 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.88 11.88 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.82 11.82 0 0 0-3.36-8.388"/></svg>Quero esse</a>
+        </div>
+      </article>
+
+      <article class="card" data-cat="casa">
+        <div class="card-img"><span class="card-cat">Casa</span><img src="img/gancho-parede.jpg" alt="Par de ganchos de parede minimalistas impressos em 3D nas cores branco e terracota neon" loading="lazy"></div>
+        <div class="card-body">
+          <h3>Gancho de Parede Minimalista</h3>
+          <p>Par de ganchos discretos com atitude — chaves, bolsas e panos sempre no lugar. Fixação dupla-face reforçada.</p>
+          <a class="card-cta" data-wa="Olá! Tenho interesse no Gancho de Parede Minimalista." href="#"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.297-.497.1-.198.05-.371-.025-.52-.074-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.262.49 1.694.627.712.227 1.36.195 1.871.118.571-.085 1.758-.718 2.006-1.41.248-.694.248-1.289.173-1.41-.074-.124-.272-.198-.57-.347m-5.421 5.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a8.19 8.19 0 0 1-1.26-4.827 8.203 8.203 0 0 1 8.224-8.207c2.196 0 4.258.858 5.815 2.414a8.187 8.187 0 0 1 2.411 5.822c-.003 4.54-3.699 8.306-8.213 8.306m7.116-18.197A10.01 10.01 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.88 11.88 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.82 11.82 0 0 0-3.36-8.388"/></svg>Quero esse</a>
+        </div>
+      </article>
+
+      <article class="card" data-cat="cozinha">
+        <div class="card-img"><span class="card-cat">Cozinha</span><img src="img/organizador-tempero.jpg" alt="Organizador giratório de temperos impresso em 3D com brilho neon ciano" loading="lazy"></div>
+        <div class="card-body">
+          <h3>Organizador Giratório de Temperos</h3>
+          <p>Base 360° pra bancada: todos os temperos ao alcance com visual de cozinha de chef. Girar é viciante.</p>
+          <a class="card-cta" data-wa="Olá! Tenho interesse no Organizador Giratório de Temperos." href="#"><svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.297-.497.1-.198.05-.371-.025-.52-.074-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.262.49 1.694.627.712.227 1.36.195 1.871.118.571-.085 1.758-.718 2.006-1.41.248-.694.248-1.289.173-1.41-.074-.124-.272-.198-.57-.347m-5.421 5.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a8.19 8.19 0 0 1-1.26-4.827 8.203 8.203 0 0 1 8.224-8.207c2.196 0 4.258.858 5.815 2.414a8.187 8.187 0 0 1 2.411 5.822c-.003 4.54-3.699 8.306-8.213 8.306m7.116-18.197A10.01 10.01 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.88 11.88 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.82 11.82 0 0 0-3.36-8.388"/></svg>Quero esse</a>
+        </div>
+      </article>
+
+      <article class="card card-custom" data-cat="all-custom">
+        <div class="big">
+          <svg viewBox="0 0 48 48" aria-hidden="true"><path fill="#0B0C12" d="M24 4 43 15 24 26 5 15Z" opacity=".95"/><path fill="#0B0C12" d="M5 15 24 26 24 44 5 33Z" opacity=".75"/><path fill="#0B0C12" d="M43 15 24 26 24 44 43 33Z" opacity=".55"/></svg>
+        </div>
+        <h3>Não achou a sua peça no catálogo?</h3>
+        <p>Peça quebrada, projeto seu ou presente personalizado com nome: a gente imprime <strong>sob medida, só para você</strong>.</p>
+        <a class="btn btn-neon" data-wa="Olá! Quero um orçamento para uma peça personalizada na Nov Studio 3D." href="#">Pedir projeto sob medida
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+        </a>
+      </article>
+    </div>
+
+    <p class="note">
+      <svg viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+      Enquanto uns esperam "chegar no estoque", seu pedido já está saindo da impressora. Fale com a gente e garanta sua vez na fila.
+    </p>
+  </div>
+</section>
+
+<!-- ═══════════ BENEFÍCIOS ═══════════ -->
+<section class="section" id="beneficios" aria-labelledby="tit-beneficios">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Por que impressão 3D</span>
+      <h2 id="tit-beneficios" class="display">O que muda quando<br>sua casa <span class="grad-text">se adapta a você</span></h2>
+      <p>Comprar pronto é aceitar o "mais ou menos". Imprimir é exigir o exato — e é isso que a gente entrega.</p>
+    </div>
+    <div class="benefits-grid">
+      <div class="benefit">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 2l2.4 7.1L22 12l-7.6 2.9L12 22l-2.4-7.1L2 12l7.6-2.9L12 2z" stroke-linejoin="round"/></svg></div>
+        <h3>Decoração &amp; miniaturas 3D</h3>
+        <p>Do dragão decorativo à miniatura personalizada: peças temáticas e geek que transformam qualquer ambiente.</p>
+      </div>
+      <div class="benefit">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+        <h3>Peça rara? A gente fabrica</h3>
+        <p>Botão de fogão, friso de carro, engrenagem de eletrodoméstico que saiu de linha — mande a peça ou as medidas, nós reproduzimos.</p>
+      </div>
+      <div class="benefit">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M12 19l7-7 3 3-7 7-3-3z"/><path d="M18 13l-1.5-7.5L2 2l3.5 14.5L13 18l5-5z"/><path d="M2 2l7.586 7.586"/><circle cx="11" cy="11" r="2"/></svg></div>
+        <h3>Só seu, impossível copiar</h3>
+        <p>Seu nome, sua data, suas cores. Porta-retratos, plaquinhas, troféus — presente que vira peça de celebração.</p>
+      </div>
+      <div class="benefit">
+        <div class="ic"><svg viewBox="0 0 24 24"><polyline points="20 12 20 22 4 22 4 12"/><rect x="2" y="7" width="20" height="5"/><line x1="12" y1="22" x2="12" y2="7"/><path d="M12 7H7.5a2.5 2.5 0 0 1 0-5C11 2 12 7 12 7z"/><path d="M12 7h4.5a2.5 2.5 0 0 0 0-5C13 2 12 7 12 7z"/></svg></div>
+        <h3>Presente impossível de esquecer</h3>
+        <p>Casamento, aniversário, formatura ou geek de plantão: a peça personalizada é a única que não vai parar no fundo da gaveta.</p>
+      </div>
+      <div class="benefit">
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div>
+        <h3>Autonomia pra quem você ama</h3>
+        <p>Abridores, adaptadores e suportes que devolvem independência a idosos e pessoas com deficiência. Tecnologia com propósito.</p>
+      </div>
+      <div class="benefit">
+        <div class="ic"><svg viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
+        <h3>Ideia hoje, peça na mão</h3>
+        <p>Protótipo de produto, peça para escola, peça para sua empresa — passamos sua ideia do desenho para o físico em dias.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ COMO FUNCIONA ═══════════ -->
+<section class="section" id="como-funciona" style="padding-top:0" aria-labelledby="tit-como">
+  <div class="container">
+    <div class="section-head">
+      <span class="eyebrow">Passo a passo</span>
+      <h2 id="tit-como" class="display">3 passos. <span class="grad-text">Zero burocracia.</span></h2>
+      <p>Sem carrinho lotado, sem cadastro, sem espera infinita — só você e a produção.</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <span class="passo-tag">Passo 1</span>
+        <div class="ic"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 6 8.38 8.38 0 0 1-3.8-.9L3 21l1.6-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 6-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></div>
+        <h3>Aponta o que quer</h3>
+        <p>Viu no catálogo ou tem uma peça quebrada/ideia na mente? Manda a foto (e as medidas, se tiver) direto no WhatsApp.</p>
+      </div>
+      <div class="step">
+        <span class="passo-tag">Passo 2</span>
+        <div class="ic"><svg viewBox="0 0 24 24"><polyline points="6 9 6 2 18 2 18 9"/><path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"/><rect x="6" y="14" width="12" height="8" rx="1"/></svg></div>
+        <h3>A gente imprime</h3>
+        <p>Você aprova cor, tamanho e acabamento. Aí é só acompanhar sua peça nascendo camada por camada aqui no estúdio.</p>
+      </div>
+      <div class="step">
+        <span class="passo-tag">Passo 3</span>
+        <div class="ic"><svg viewBox="0 0 24 24"><rect x="1" y="3" width="15" height="13" rx="1.5"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div>
+        <h3>Recebe e flexiona</h3>
+        <p>Retirada em Montes Claros/MG ou Correios pra todo o Brasil — combinado na conversa, sem enrolação.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ SOBRE ═══════════ -->
+<section class="section" id="sobre" style="background:#0B0C12;border-block:1px solid var(--line)" aria-labelledby="tit-sobre">
+  <div class="container sobre-grid">
+    <div>
+      <span class="eyebrow">Sobre a empresa</span>
+      <h2 id="tit-sobre" class="display">Um estúdio.<br><span class="grad-text">Uma impressora.<br>Mil possibilidades.</span></h2>
+      <p>A <strong>Nov Studio 3D</strong> nasceu com uma obsessão simples: provar que o objeto certo, na medida certa, muda o dia de uma pessoa — e que isso não devia depender da loja da esquina ter o que você precisa.</p>
+      <p>Especialistas em <strong>miniaturas, decoração, linha Tabacaria 3D e peças de reposição</strong>, somos um estúdio independente em <strong>Montes Claros/MG</strong>. Cada pedido é impresso aqui, sob encomenda, camada por camada, com filamentos de qualidade e o cuidado de quem ama o ofício.</p>
+      <ul class="checklist">
+        <li><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="rgba(157,255,39,.1)" stroke="#9dff27" stroke-width="1.4"/><polyline points="8.5 12.5 11.2 15.2 15.5 9.5" stroke="#9dff27" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><span><strong>Fala com quem faz</strong> — nada de robô, atravessador ou call center</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="rgba(157,255,39,.1)" stroke="#9dff27" stroke-width="1.4"/><polyline points="8.5 12.5 11.2 15.2 15.5 9.5" stroke="#9dff27" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><span><strong>Honestidade de bancada</strong> — se algo não imprime bem, a gente te avisa antes</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="rgba(157,255,39,.1)" stroke="#9dff27" stroke-width="1.4"/><polyline points="8.5 12.5 11.2 15.2 15.5 9.5" stroke="#9dff27" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><span><strong>Sua peça é única</strong> — feita pro seu uso, na sua cor, no seu tempo</span></li>
+        <li><svg viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="10" fill="rgba(157,255,39,.1)" stroke="#9dff27" stroke-width="1.4"/><polyline points="8.5 12.5 11.2 15.2 15.5 9.5" stroke="#9dff27" stroke-width="2.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg><span><strong>Do Norte de Minas pro Brasil</strong> — retirada local ou envio seguro</span></li>
+      </ul>
+      <a class="btn btn-wa" data-wa="Olá! Quero conhecer melhor o trabalho da Nov Studio 3D." href="#">Quero conversar com o estúdio</a>
+    </div>
+    <aside class="sobre-art" aria-label="A Nov Studio 3D em números e identidade">
+      <div class="art-cube">
+        <svg width="150" height="150" viewBox="0 0 48 48" role="img" aria-label="Cubo neon, símbolo do estúdio"><path fill="#9dff27" d="M24 2 45 14 24 26 3 14Z"/><path fill="#53d600" d="M3 14 24 26 24 46 3 34Z"/><path fill="#258a00" d="M45 14 24 26 24 46 45 34Z"/></svg>
+      </div>
+      <span class="tagline">Estúdio independente · Montes Claros/MG</span>
+      <h3>Camada por camada,<br>a gente constrói futuro.</h3>
+      <p>Filamento nacional, impressora calibrada e obsessão por acabamento — a estética industrial encontra a precisão digital.</p>
+      <div class="art-stats">
+        <div class="art-stat"><b>100%</b><span>sob encomenda</span></div>
+        <div class="art-stat"><b>1:1</b><span>com quem imprime</span></div>
+        <div class="art-stat"><b>24h</b><span>resposta média no WhatsApp*</span></div>
+      </div>
+      <p style="font-size:.68rem;margin-top:14px;color:#8A9A8E">*horário comercial. Pedidos fora do horário são respondidos no dia seguinte.</p>
+    </aside>
+  </div>
+</section>
+
+<!-- ═══════════ FAQ ═══════════ -->
+<section class="section" id="faq" aria-labelledby="tit-faq">
+  <div class="container">
+    <div class="section-head" style="margin-inline:auto;text-align:center;max-width:640px">
+      <span class="eyebrow" style="justify-content:center">Sem dúvidas no caminho</span>
+      <h2 id="tit-faq" class="display">Perguntas <span class="grad-text">rápidas</span></h2>
+    </div>
+    <div class="faq-wrap" id="faqList">
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq-a1" id="faq-q1">Quanto tempo demora meu pedido?
+          <span class="fi"><svg viewBox="0 0 24 24" fill="none"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="faq-a" id="faq-a1" role="region" aria-labelledby="faq-q1"><p>Peças simples do catálogo costumam sair em 1 a 3 dias úteis. Projetos personalizados a gente combina o prazo no WhatsApp antes de imprimir — você acompanha o andamento pela conversa.</p></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq-a2" id="faq-q2">Posso escolher cor, tamanho e acabamento?
+          <span class="fi"><svg viewBox="0 0 24 24" fill="none"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="faq-a" id="faq-a2" role="region" aria-labelledby="faq-q2"><p>Sempre. É justamente a vantagem da impressão 3D: PLA, PETG e TPU (flexível) em várias cores, com acabamento fosco ou com as camadas de propósito visíveis — a assinatura do processo.</p></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq-a3" id="faq-q3">Vocês enviam para outras cidades?
+          <span class="fi"><svg viewBox="0 0 24 24" fill="none"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="faq-a" id="faq-a3" role="region" aria-labelledby="faq-q3"><p>Sim: retirada em Montes Claros/MG e Correios pra qualquer cidade do Brasil. O frete é combinado conforme peso e CEP — sem taxa escondida.</p></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq-a4" id="faq-q4">Como funciona o pagamento?
+          <span class="fi"><svg viewBox="0 0 24 24" fill="none"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="faq-a" id="faq-a4" role="region" aria-labelledby="faq-q4"><p>Pix, transferência e cartão (link de pagamento). Para projetos personalizados pedimos um sinal pra começar a produção e o restante na entrega.</p></div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-q" aria-expanded="false" aria-controls="faq-a5" id="faq-q5">Não tenho o modelo 3D da peça que quebrou. Dá pra fazer?
+          <span class="fi"><svg viewBox="0 0 24 24" fill="none"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+        </button>
+        <div class="faq-a" id="faq-a5" role="region" aria-labelledby="faq-q5"><p>Na maioria dos casos, sim: manda fotos de vários ângulos e as medidas no WhatsApp. A gente analisa e te diz se dá pra reproduzir. Só não copiamos peças com marca registrada de terceiros.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ INSTAGRAM ═══════════ -->
+<section class="ig-band" aria-label="Instagram da Nov Studio 3D">
+  <div class="container ig-inner">
+    <div class="l">
+      <svg viewBox="0 0 24 24" fill="#fff" role="img" aria-label="Instagram"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.92 4.92.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.92 4.92-1.266.058-1.644.07-4.85.07s-3.584-.012-4.849-.07c-3.26-.149-4.771-1.699-4.92-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.92-4.92 1.266-.057 1.645-.069 4.849-.069zm0 1.802c-3.141 0-3.525.01-4.769.069-2.633.118-3.867 1.35-3.985 3.985-.058 1.243-.069 1.629-.069 4.769s.011 3.526.069 4.769c.119 2.635 1.352 3.867 3.985 3.985 1.244.058 1.628.069 4.769.069s3.524-.012 4.769-.069c2.634-.118 3.867-1.351 3.985-3.985.058-1.244.069-1.628.069-4.769s-.011-3.525-.069-4.769c-.119-2.634-1.351-3.867-3.985-3.985-1.245-.058-1.627-.069-4.77-.069zm0 3.064a5.97 5.97 0 1 1 0 11.94 5.97 5.97 0 0 1 0-11.94zm0 1.803a4.168 4.168 0 1 0 0 8.336 4.168 4.168 0 0 0 0-8.336zm6.406-2.064a1.395 1.395 0 1 1-2.79 0 1.395 1.395 0 0 1 2.79 0z"/></svg>
+      <div>
+        <h3>Bastidores direto da bancada</h3>
+        <p>Peças nascendo, cores novas e ofertas só no story: @novstudio3d</p>
+      </div>
+    </div>
+    <a class="btn-ig" href="https://www.instagram.com/novstudio3d" target="_blank" rel="noopener noreferrer">Seguir @novstudio3d</a>
+  </div>
+</section>
+
+<!-- ═══════════ CONTATO FINAL ═══════════ -->
+<section class="cta-final" id="contato" aria-labelledby="tit-contato">
+  <div class="container">
+    <span class="urg-tag"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><polyline points="12 7 12 12 15 14"/></svg>A fila de impressão não espera</span>
+    <h2 id="tit-contato" class="display">Sua peça<br><span class="grad-text">começa hoje.</span></h2>
+    <p>Cada pedido é produzido por ordem de chegada. Mensagem no WhatsApp agora = sua peça na frente de quem deixou pra depois.</p>
+    <a class="btn btn-wa" data-wa="Olá! Vim pelo site da Nov Studio 3D e quero fazer meu pedido AGORA." href="#" style="font-size:1.1rem;padding:17px 34px;border-radius:14px">
+      <svg width="26" height="26" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.297-.497.1-.198.05-.371-.025-.52-.074-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.262.49 1.694.627.712.227 1.36.195 1.871.118.571-.085 1.758-.718 2.006-1.41.248-.694.248-1.289.173-1.41-.074-.124-.272-.198-.57-.347m-5.421 5.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a8.19 8.19 0 0 1-1.26-4.827 8.203 8.203 0 0 1 8.224-8.207c2.196 0 4.258.858 5.815 2.414a8.187 8.187 0 0 1 2.411 5.822c-.003 4.54-3.699 8.306-8.213 8.306m7.116-18.197A10.01 10.01 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.88 11.88 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.82 11.82 0 0 0-3.36-8.388"/></svg>
+      (38) 99994-0272
+    </a>
+    <span class="num"><small>WhatsApp direto</small>(38) 99994-0272</span>
+  </div>
+</section>
+</main>
+
+<!-- ═══════════ FOOTER ═══════════ -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div style="max-width:280px">
+        <a class="logo" href="#top" style="text-decoration:none;margin-bottom:10px">
+          <svg width="30" height="30" viewBox="0 0 48 48" aria-hidden="true"><path fill="#9dff27" d="M24 2 45 14 24 26 3 14Z"/><path fill="#53d600" d="M3 14 24 26 24 46 3 34Z"/><path fill="#258a00" d="M45 14 24 26 24 46 45 34Z"/></svg>
+          <span>Nov Studio 3D</span>
+        </a>
+        <p style="margin-top:10px">Miniaturas, decoração, linha Tabacaria 3D e peças sob medida — ideias que ganham forma no norte de Minas Gerais.</p>
+      </div>
+      <nav aria-label="Rodapé — navegação">
+        <h4>Navegação</h4>
+        <p><a href="#produtos">Vitrine</a></p>
+        <p><a href="#beneficios">Por que impressão 3D</a></p>
+        <p><a href="#como-funciona">Como funciona</a></p>
+        <p><a href="#sobre">Sobre a empresa</a></p>
+        <p><a href="#faq">Perguntas frequentes</a></p>
+      </nav>
+      <div>
+        <h4>Contato</h4>
+        <p><a href="https://wa.me/5538999940272" rel="noopener">WhatsApp: (38) 99994-0272</a></p>
+        <p><a href="https://www.instagram.com/novstudio3d" target="_blank" rel="noopener noreferrer">Instagram: @novstudio3d</a></p>
+        <p>Montes Claros/MG</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© <span id="anoAtual"></span> Nov Studio 3D · Todos os direitos reservados</span>
+      <span>Impresso em 3D · Montes Claros/MG</span>
+    </div>
+  </div>
+</footer>
+
+<!-- ═══════════ BOTÃO FLUTUANTE ═══════════ -->
+<a class="wa-float" data-wa="Olá! Vim pelo site da Nov Studio 3D e quero fazer meu pedido AGORA." href="https://wa.me/5538999940272" aria-label="Conversar no WhatsApp">
+  <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.52.149-.174.198-.298.297-.497.1-.198.05-.371-.025-.52-.074-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.262.49 1.694.627.712.227 1.36.195 1.871.118.571-.085 1.758-.718 2.006-1.41.248-.694.248-1.289.173-1.41-.074-.124-.272-.198-.57-.347m-5.421 5.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a8.19 8.19 0 0 1-1.26-4.827 8.203 8.203 0 0 1 8.224-8.207c2.196 0 4.258.858 5.815 2.414a8.187 8.187 0 0 1 2.411 5.822c-.003 4.54-3.699 8.306-8.213 8.306m7.116-18.197A10.01 10.01 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.88 11.88 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.82 11.82 0 0 0-3.36-8.388"/></svg>
+</a>
+
+<script>
+(function(){
+  "use strict";
+
+  var WA_NUMBER = "5538999940272";
+
+  document.querySelectorAll("[data-wa]").forEach(function(el){
+    var msg = el.getAttribute("data-wa") || "Olá! Vim pelo site da Nov Studio 3D.";
+    el.setAttribute("href", "https://wa.me/" + WA_NUMBER + "?text=" + encodeURIComponent(msg));
+    el.setAttribute("target", "_blank");
+    el.setAttribute("rel", "noopener noreferrer");
+  });
+
+  var header = document.querySelector(".header");
+  function onScroll(){ header.style.boxShadow = window.scrollY > 24 ? "0 10px 40px rgba(0,0,0,.55), inset 0 -1px 0 rgba(157,255,39,.18)" : "none"; }
+  window.addEventListener("scroll", onScroll, { passive: true });
+  onScroll();
+
+  var burger = document.getElementById("hamburger");
+  var mobileNav = document.getElementById("mobileNav");
+  burger.addEventListener("click", function(){
+    var open = mobileNav.classList.toggle("open");
+    burger.setAttribute("aria-expanded", String(open));
+    burger.setAttribute("aria-label", open ? "Fechar menu" : "Abrir menu");
+  });
+  mobileNav.querySelectorAll("a").forEach(function(a){
+    a.addEventListener("click", function(){ mobileNav.classList.remove("open"); burger.setAttribute("aria-expanded","false"); });
+  });
+
+  var track = document.getElementById("marqueeTrack");
+  if (track) { track.innerHTML += track.innerHTML; }
+
+  var filterBtns = document.querySelectorAll(".filter-btn");
+  var cards = document.querySelectorAll("#productGrid .card");
+  filterBtns.forEach(function(btn){
+    btn.addEventListener("click", function(){
+      filterBtns.forEach(function(b){ b.classList.toggle("active", b === btn); });
+      var f = btn.getAttribute("data-filter");
+      cards.forEach(function(card){
+        var cat = card.getAttribute("data-cat") || "";
+        var show = f === "all" || cat === f || cat === "all-custom";
+        card.style.display = show ? "" : "none";
+      });
+    });
+  });
+
+  document.querySelectorAll(".faq-q").forEach(function(btn){
+    btn.addEventListener("click", function(){
+      var expanded = btn.getAttribute("aria-expanded") === "true";
+      var panel = document.getElementById(btn.getAttribute("aria-controls"));
+      document.querySelectorAll(".faq-q[aria-expanded='true']").forEach(function(other){
+        if (other !== btn) {
+          other.setAttribute("aria-expanded", "false");
+          document.getElementById(other.getAttribute("aria-controls")).style.maxHeight = null;
+        }
+      });
+      btn.setAttribute("aria-expanded", String(!expanded));
+      panel.style.maxHeight = !expanded ? panel.scrollHeight + "px" : null;
+    });
+  });
+
+  var ano = document.getElementById("anoAtual");
+  if (ano) ano.textContent = String(new Date().getFullYear());
+})();
+</script>
+</body>
+</html>
